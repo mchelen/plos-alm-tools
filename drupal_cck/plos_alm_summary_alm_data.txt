@@ -1,0 +1,30 @@
+$content['type']  = array (
+  'name' => 'PLOS ALM Summary ALM Data',
+  'type' => 'plos_alm_summary_alm_data',
+  'description' => 'PLOS ALM Summary ALM Data',
+  'title_label' => 'Title',
+  'body_label' => 'Body',
+  'min_word_count' => '0',
+  'help' => '',
+  'node_options' => 
+  array (
+    'status' => true,
+    'promote' => true,
+    'sticky' => false,
+    'revision' => false,
+  ),
+  'old_type' => 'plos_alm_summary_alm_data',
+  'orig_type' => '',
+  'module' => 'node',
+  'custom' => '1',
+  'modified' => '1',
+  'locked' => '0',
+  'xmlsitemap_node_type_priority' => '0.5',
+);
+$content['extra']  = array (
+  'title' => '-5',
+  'body_field' => '0',
+  'revision_information' => '20',
+  'path' => '30',
+);
+
