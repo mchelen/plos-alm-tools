@@ -2037,6 +2037,681 @@ $content['fields']  = array (
       ),
     ),
   ),
+  23 => 
+  array (
+    'label' => 'Days Old',
+    'field_name' => 'field_days_old',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '23',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = (time() - $node->created)/60/60/24;',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'int',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'int',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  24 => 
+  array (
+    'label' => 'Citations Total',
+    'field_name' => 'field_citations_total',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '24',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_citations_pubmed[0][\'value\'] + $node->field_citations_scopus[0][\'value\'] + $node->field_citations_crossref[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'int',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'int',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  25 => 
+  array (
+    'label' => 'Citations Total Per Day',
+    'field_name' => 'field_citations_total_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '25',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_citations_total[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  26 => 
+  array (
+    'label' => 'Citations CrossRef Per Day',
+    'field_name' => 'field_citations_crossref_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '26',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_citations_crossref[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  27 => 
+  array (
+    'label' => 'Citations Pubmed Per Day',
+    'field_name' => 'field_citations_pubmed_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '27',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_citations_pubmed[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  28 => 
+  array (
+    'label' => 'Citations Scopus Per Day',
+    'field_name' => 'field_citations_scopus_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '28',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_citations_scopus[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  29 => 
+  array (
+    'label' => 'HTML Page Views Per Day',
+    'field_name' => 'field_total_html_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '29',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_total_html[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  30 => 
+  array (
+    'label' => 'PDF Downloads Per Day',
+    'field_name' => 'field_total_pdf_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '30',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_total_pdf[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  31 => 
+  array (
+    'label' => 'XML Downloads Per Day',
+    'field_name' => 'field_total_xml_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '31',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_total_xml[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
 );
 $content['extra']  = array (
   'title' => '-5',
