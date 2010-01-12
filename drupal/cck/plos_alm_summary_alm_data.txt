@@ -19,7 +19,6 @@ $content['type']  = array (
   'custom' => '1',
   'modified' => '1',
   'locked' => '0',
-  'xmlsitemap_node_type_priority' => '0.5',
 );
 $content['fields']  = array (
   0 => 
@@ -43,6 +42,7 @@ $content['fields']  = array (
     ),
     'default_value_php' => '',
     'default_value_widget' => NULL,
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'text_processing' => '0',
@@ -131,6 +131,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -221,6 +222,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'text_processing' => '0',
@@ -311,6 +313,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'text_processing' => '0',
@@ -399,6 +402,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -487,6 +491,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -575,6 +580,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -663,6 +669,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -746,6 +753,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -834,6 +842,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -922,6 +931,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1010,6 +1020,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1098,6 +1109,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1186,6 +1198,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1274,6 +1287,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1362,6 +1376,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1450,6 +1465,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1538,6 +1554,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1626,6 +1643,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1714,6 +1732,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1802,6 +1821,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1890,6 +1910,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -1978,6 +1999,7 @@ $content['fields']  = array (
         ),
       ),
     ),
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'min' => '',
@@ -2050,6 +2072,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = (time() - $node->created)/60/60/24;',
@@ -2125,6 +2148,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_citations_pubmed[0][\'value\'] + $node->field_citations_scopus[0][\'value\'] + $node->field_citations_crossref[0][\'value\'];',
@@ -2200,6 +2224,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_citations_total[0][\'value\'] / $node->field_days_old[0][\'value\'];',
@@ -2275,6 +2300,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_citations_crossref[0][\'value\'] / $node->field_days_old[0][\'value\'];',
@@ -2350,6 +2376,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_citations_pubmed[0][\'value\'] / $node->field_days_old[0][\'value\'];',
@@ -2425,6 +2452,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_citations_scopus[0][\'value\'] / $node->field_days_old[0][\'value\'];',
@@ -2500,6 +2528,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_total_html[0][\'value\'] / $node->field_days_old[0][\'value\'];',
@@ -2575,6 +2604,7 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_total_pdf[0][\'value\'] / $node->field_days_old[0][\'value\'];',
@@ -2650,9 +2680,86 @@ $content['fields']  = array (
     array (
     ),
     'default_value_php' => '',
+    'group' => false,
     'required' => 0,
     'multiple' => '0',
     'code' => '$node_field[0][\'value\'] = $node->field_total_xml[0][\'value\'] / $node->field_days_old[0][\'value\'];',
+    'display_format' => '$display = $node_field_item[\'value\'];',
+    'store' => 1,
+    'data_type' => 'float',
+    'data_length' => '128',
+    'data_default' => '',
+    'data_not_NULL' => 0,
+    'data_sortable' => 1,
+    'op' => 'Save field settings',
+    'module' => 'computed_field',
+    'widget_module' => 'computed_field',
+    'columns' => 
+    array (
+      'value' => 
+      array (
+        'type' => 'float',
+        'length' => '128',
+        'not NULL' => 0,
+        'sortable' => 1,
+      ),
+    ),
+    'display_settings' => 
+    array (
+      'label' => 
+      array (
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      'teaser' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      4 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      2 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      3 => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => 
+      array (
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+  ),
+  32 => 
+  array (
+    'label' => 'Combined Usage Per Day',
+    'field_name' => 'field_combined_usage_per_day',
+    'type' => 'computed',
+    'widget_type' => 'computed',
+    'change' => 'Change basic information',
+    'weight' => '32',
+    'description' => '',
+    'default_value' => 
+    array (
+    ),
+    'default_value_php' => '',
+    'group' => false,
+    'required' => 0,
+    'multiple' => '0',
+    'code' => '$node_field[0][\'value\'] = $node->field_combined_usage[0][\'value\'] / $node->field_days_old[0][\'value\'];',
     'display_format' => '$display = $node_field_item[\'value\'];',
     'store' => 1,
     'data_type' => 'float',
