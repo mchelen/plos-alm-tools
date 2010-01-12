@@ -2,5 +2,16 @@ Tools for working with Public Library of Science Article Level Metrics
 
 Drupal:
     CCK
-         plos_alm_summary_alm_data
+        plos_alm_summary_alm_data
     Views
+        articles_search
+
+
+License: CC0 1.0 Universal
+http://creativecommons.org/publicdomain/zero/1.0/
+
+Contributors: Michael Chelen
+
+    
+    
+    
