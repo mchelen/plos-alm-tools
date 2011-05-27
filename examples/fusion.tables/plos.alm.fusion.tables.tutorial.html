@@ -1,0 +1,91 @@
+The PLoS ALM data has been loaded into a <a href="http://blogs.plos.org/plos/2010/07/plos-alm-data-in-google-fusion-tables/">set of Google Fusion Tables</a>. The table data can be exported as CSV. It allows filtering, sorting, aggregation, and more with SQL-like queries. The data can for example be loaded in a Google Spreadsheet.
+<br />
+The data is broken into 5 tables: Summary ALM Data, Combined Download Statistics, HTML Views, PDF Downloads, and XML Downloads. The table is referenced with an ID number.<br />
+<br />
+Base URL for Fusion Tables CSV export:<br />
+<pre class="text source-text" style="font-family:monospace;">http://tables.googlelabs.com/exporttable?query=
+</pre>
+The query should be URL encoded.
+<br />
+Query reference:<br />
+https://code.google.com/apis/fusiontables/docs/developers_reference.html#Select<br />
+<br />
+The first table is Summary ALM Data.
+<br />
+Table:
+Name:	PLoS ALM v3 05182010 Summary ALM Data<br />
+ID:	204244<br />
+http://tables.googlelabs.com/DataSource?snapid=61925<br />
+<br />
+entire table<br />
+SELECT * FROM 204244<br />
+<br />
+<br />
+google docs supports import up to 500kb<br />
+unlimited results may not fit on the spreadsheet, so use a limit<br />
+<br />
+Limit results:<br />
+SELECT * FROM 204244 LIMIT 10<br />
+<iframe width='500' height='300' frameborder='0' src='http://spreadsheets.google.com/pub?key=tw6F5r-M_VQ2aM82w1vN3sg&single=true&gid=0&output=html&widget=true'></iframe>
+<br />
+Select particular columns:<br />
+SELECT 'Article Title',DOI,URL FROM 204244 LIMIT 10<br />
+<iframe width='500' height='300' frameborder='0' src='http://spreadsheets.google.com/pub?key=tw6F5r-M_VQ2aM82w1vN3sg&single=true&gid=2&output=html&widget=true'></iframe>
+<br />
+<br />
+Escape special characters:<br />
+SELECT '\'Research Article\' or \'non-Research Article\'?' FROM 204244 LIMIT 10<br />
+<br />
+or use column references<br />
+SELECT col1,col2 FROM 204244 LIMIT 10<br />
+<br />
+sort results (by citation)<br />
+SELECT * FROM 204244 ORDER BY 'Citations - CrossRef' DESC LIMIT 10<br />
+<br />
+Most cited from 2009, filter for articles from  2009 (most crossref citations)<br />
+SELECT * WHERE 'Publication Year' = '2009' FROM 204244 ORDER BY 'Citations - CrossRef' DESC LIMIT 10<br />
+<br />
+<br />
+Table:<br />
+Name:	PLoS ALM v3 05182010 Combined Download Statistics<br />
+ID:	202272<br />
+http://tables.googlelabs.com/DataSource?snapid=62323<br />
+<br />
+<br />
+find articles with highest usage during 2010-3<br />
+<br />
+SELECT * FROM 202272 ORDER BY '2010-3' DESC LIMIT 10<br />
+<br />
+Sum of usage for past year:
+<br />
+SELECT SUM('2009-3'),SUM('2009-4'),SUM('2009-5'),SUM('2009-6'),SUM('2009-7'),SUM('2009-8'),SUM('2009-9'),SUM('2009-10'),SUM('2009-11'),SUM('2009-12'),SUM('2010-1'),SUM('2010-2'),SUM('2010-3') FROM 202272<br />
+<br />
+Sum of all time usage:
+<script src="http://gist.github.com/617850.js?file=PLoS%20ALM%20Combined%20Download%20Statistics%20Sum"></script>
+<noscript><pre class="sql source-sql" style="font-family:monospace;">SELECT SUM('2003-10'),SUM('2003-11'),SUM('2003-12'),SUM('2004-1'),SUM('2004-2'),SUM('2004-3'),SUM('2004-4'),SUM('2004-5'),SUM('2004-6'),SUM('2004-7'),SUM('2004-8'),SUM('2004-9'),SUM('2004-10'),SUM('2004-11'),SUM('2004-12'),SUM('2005-1'),SUM('2005-2'),SUM('2005-3'),SUM('2005-4'),SUM('2005-5'),SUM('2005-6'),SUM('2005-7'),SUM('2005-8'),SUM('2005-9'),SUM('2005-10'),SUM('2005-11'),SUM('2005-12'),SUM('2006-1'),SUM('2006-2'),SUM('2006-3'),SUM('2006-4'),SUM('2006-5'),SUM('2006-6'),SUM('2006-7'),SUM('2006-8'),SUM('2006-9'),SUM('2006-10'),SUM('2006-11'),SUM('2006-12'),SUM('2007-1'),SUM('2007-2'),SUM('2007-3'),SUM('2007-4'),SUM('2007-5'),SUM('2007-6'),SUM('2007-7'),SUM('2007-8'),SUM('2007-9'),SUM('2007-10'),SUM('2007-11'),SUM('2007-12'),SUM('2008-1'),SUM('2008-2'),SUM('2008-3'),SUM('2008-4'),SUM('2008-5'),SUM('2008-6'),SUM('2008-7'),SUM('2008-8'),SUM('2008-9'),SUM('2008-10'),SUM('2008-11'),SUM('2008-12'),SUM('2009-1'),SUM('2009-2'),SUM('2009-3'),SUM('2009-4'),SUM('2009-5'),SUM('2009-6'),SUM('2009-7'),SUM('2009-8'),SUM('2009-9'),SUM('2009-10'),SUM('2009-11'),SUM('2009-12'),SUM('2010-1'),SUM('2010-2'),SUM('2010-3') FROM 202272</pre></noscript>
+<br />
+<br />
+Usage type tables
+<br />
+Name:	PLoS ALM v3 05182010 HTML Views<br />
+ID:	202552<br />
+http://tables.googlelabs.com/DataSource?snapid=62324<br />
+<br />
+<br />
+Name:	PLoS ALM v3 05182010 PDF Downloads<br />
+ID:	203967<br />
+http://tables.googlelabs.com/DataSource?snapid=62524<br />
+<br />
+<br />
+Name:	PLoS ALM v3 05182010 XML Downloads<br />
+ID:	203785<br />
+http://tables.googlelabs.com/DataSource?snapid=62607<br />
+<br />
+see also:
+<br />
+<br />
+most citations<br />
+https://spreadsheets.google.com/ccc?key=0AuD5dr31WtX4dFJyRUt0eVRDb2NBbU8wSE5IamxtV2c&hl=en&ui=1#gid=0
+<br />
+???<br />
+https://spreadsheets.google.com/ccc?key=0AuD5dr31WtX4dE1OZElxUmtJUWdVTDF0MW8zNEluQnc&hl=en&ui=1#gid=0
